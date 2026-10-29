@@ -1,0 +1,26 @@
+pipeline {
+  agent any
+    stages {
+      stage (PULL) {
+            steps {
+                git branch: 'main', url: 'https://github.com/vedantam8/jenkins-project.git'
+                echo 'pull success'
+            }
+        }
+        stage (BUILD) {
+            steps {
+                echo 'build success'
+            }
+        }
+        stage (TEST) {
+            steps {
+                echo 'test success'
+            }
+        }
+        stage (DEPLOY){
+            steps {
+                echo 'deploy success'
+            }
+        }
+    }
+}
