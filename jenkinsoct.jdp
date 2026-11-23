@@ -19,7 +19,7 @@ pipeline {
             steps {
                 withSonarQubeEnv(
                     installationName: 'sonarqube',
-                    credentialsId: 'sonar-credd'
+                    credentialsId: 'sonar-creddd'
                 ) {
                     dir('backend') {
                         sh '''mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
